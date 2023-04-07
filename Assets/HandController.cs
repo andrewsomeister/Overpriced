@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class HandController : MonoBehaviour {
@@ -13,6 +11,7 @@ public class HandController : MonoBehaviour {
 	// Store the player controller to forward it to the object
 	[Header( "Player Controller" )]
 	public MainPlayerController playerController;
+
 
 
 	// Store all gameobjects containing an Anchor
