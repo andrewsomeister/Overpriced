@@ -11,14 +11,11 @@ public class LightSwitch : Switch {
     protected SwitchEvent on_toggled_callback_with_arg; 
     
     public void on_toggled(SwitchEvent callback) { 
-        Debug.LogWarningFormat("Light Switch Callback Set ");
         on_toggled_callback_with_arg = callback; 
     }
 
     public bool turnedOn = true;
     public override void self_toggled_by ( MainPlayerController player ) {
-
-        Debug.LogWarningFormat("Light Switch is Called ");
 
         base.self_toggled_by( player );
         turnedOn = !turnedOn;
