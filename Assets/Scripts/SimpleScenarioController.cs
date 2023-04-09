@@ -11,19 +11,20 @@ public class SimpleScenarioController : Controller {
 	public FloorSwitch floorSwitchB;
 
 	void Start () {
-		floorSwitchA.on_toggled(
+		floorSwitchA.on_toggled( // passing the callback function 
             ( switch_state ) => { 
             if ( switch_state ) 
-            {
                 fenceA.open(); 
-                Debug.LogWarningFormat("~~~~~~~~~~~~~~~~~~ SWITCH STATE A CALLED" + switch_state);
-
-            } 
-            else {
+            else 
                 fenceA.close();             
-            }
             } );
-		    floorSwitchB.on_toggled( ( switch_state ) => { if ( switch_state ) fenceB.open(); else fenceB.close(); } );
+		floorSwitchB.on_toggled( 
+            ( switch_state ) => { 
+                if ( switch_state ) 
+                    fenceB.open(); 
+                else 
+                    fenceB.close(); 
+            });
 	}
 
 }
