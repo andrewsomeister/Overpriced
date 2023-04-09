@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LightComponent : MonoBehaviour
 {
-    Light light; 
+    Light lightcomp; 
     public bool lightState = true;
     public void TurnOn() {
         lightState = true;
@@ -15,27 +15,27 @@ public class LightComponent : MonoBehaviour
         Debug.LogWarningFormat("TurnOff() is called lightState is", this.lightState);
 
     }
-
     // Start is called before the first frame update
     void Start()
     {
-        light = GetComponent<Light>();
+        lightcomp = GetComponent<Light>();
+        Debug.LogWarningFormat("Light is ", lightcomp.name);
     }
 
     // Update is called once per frame
     void Update()
     {
         if (lightState == true) {
-            light.enabled = true;
+            lightcomp.enabled = true;
             Debug.LogWarningFormat("_______________Light is On_______________");
             
         }
         else {
-            light.enabled = false;
+            lightcomp.enabled = false;
+            lightcomp.color = Color.blue;
             Debug.LogWarningFormat("|||||||||||||||||Light is Off ||||||||||||||||||");
-            Debug.LogWarningFormat("|||||||||||||||||I am ||||||||||||||||||, ", light.name);
+            Debug.LogWarningFormat("|||||||||||||||||I am ||||||||||||||||||, ", lightcomp.name);
 
         }
-        Debug.LogWarningFormat("I am ", light.name, " and my light state is ", light.lightState);
     }
 }
