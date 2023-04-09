@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PlayAudioSwitch : MonoBehaviour
 {
-    public AudioClip clip;
+    public AudioClip clip; // the sound to play when hit 
     private AudioSource source;
-    public string targetTag;
+    public string targetTag; // the thing needed to switch this on 
 
     // Start is called before the first frame update
     void Start()
@@ -15,9 +15,10 @@ public class PlayAudioSwitch : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        if (other.CompareTag(targetTag)) {
+        // if (other.CompareTag(targetTag)) {
+            Debug.Log("PlayAudioSwitch: targetTag ", other.gameObject);
             source.PlayOneShot(clip);
-        }
+        // }
     }
    
 }
