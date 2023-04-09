@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public class FloorSwitch : Switch {
 
 	// Define new event type (i.e. we want the function to be called to expect one argument with the boolean type)
@@ -7,7 +9,10 @@ public class FloorSwitch : Switch {
 	protected SwitchEvent on_toggled_callback_with_arg;
 
 	// Allow external objects (such as a controller) to tell which function to call with an argument when an interaction with the player occurs
-	public void on_toggled ( SwitchEvent callback ) { on_toggled_callback_with_arg = callback; }
+	public void on_toggled ( SwitchEvent callback ) { 
+		Debug.LogWarningFormat("Floor Switch Callback Set ");
+		on_toggled_callback_with_arg = callback; 
+		}
 
 
 	// Store switch state
@@ -20,6 +25,8 @@ public class FloorSwitch : Switch {
 
 		// Change the switch state
 		turnedOn = !turnedOn;
+
+		Debug.LogWarningFormat("Floor Switch is Called ");
 
 		// Call the referenced of the stored function with the switch state
 		if ( on_toggled_callback_with_arg != null ) on_toggled_callback_with_arg( turnedOn );

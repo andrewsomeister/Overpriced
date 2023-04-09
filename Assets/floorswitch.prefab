@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7907291912799204372}
   - component: {fileID: 3637540108846029377}
   - component: {fileID: 1394811451034549295}
-  - component: {fileID: -7900752427421082551}
   m_Layer: 0
   m_Name: floorswitch
   m_TagString: Untagged
@@ -106,16 +105,3 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-7900752427421082551
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1448973314874308739}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bae3a0c4c9f3f4d658724131df38e7b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  turnedOn: 0

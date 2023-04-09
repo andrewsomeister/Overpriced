@@ -109,6 +109,8 @@ public class HandController : MonoBehaviour {
 				object_grasped.attach_to( this );
 			}
 
+
+
 		//==============================================//
 		// Define the behavior when the hand get opened //
 		//==============================================//
