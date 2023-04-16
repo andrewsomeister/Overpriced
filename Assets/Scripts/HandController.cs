@@ -13,7 +13,6 @@ public class HandController : MonoBehaviour {
 	public MainPlayerController playerController;
 
 
-
 	// Store all gameobjects containing an Anchor
 	// N.B. This list is static as it is the same list for all hands controller
 	// thus there is no need to duplicate it for each instance
@@ -44,7 +43,12 @@ public class HandController : MonoBehaviour {
 
 
 	// Automatically called at each frame
-	void Update () { handle_controller_behavior(); }
+	void Update () { 
+		handle_controller_behavior();
+		Debug.LogWarningFormat( "update left speed is ", OVRInput.GetLocalControllerVelocity( OVRInput.Controller.LTouch ));
+		Debug.LogWarningFormat( "update right speed is ", OVRInput.GetLocalControllerVelocity( OVRInput.Controller.RTouch ));
+ 
+	}
 
 
 	// Store the previous state of triggers to detect edges
@@ -63,8 +67,6 @@ public class HandController : MonoBehaviour {
 		bool hand_closed = is_hand_closed();
 		if ( hand_closed == is_hand_closed_previous_frame ) return;
 		is_hand_closed_previous_frame = hand_closed;
-
-
 
 		//==============================================//
 		// Define the behavior when the hand get closed //
@@ -107,8 +109,12 @@ public class HandController : MonoBehaviour {
 
 				// Grab this object
 				object_grasped.attach_to( this );
-			}
 
+				// Log the speed of the hand 
+				Debug.LogWarningFormat( "left speed is ", OVRInput.GetLocalControllerVelocity( OVRInput.Controller.LTouch ));
+				Debug.LogWarningFormat( "right speed is ", OVRInput.GetLocalControllerVelocity( OVRInput.Controller.RTouch ));
+
+			}
 
 
 		//==============================================//
@@ -120,6 +126,8 @@ public class HandController : MonoBehaviour {
 
 			// Release the object
 			object_grasped.detach_from( this );
+
+		
 		}
 	}
 }
