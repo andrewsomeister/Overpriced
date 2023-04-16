@@ -2280,6 +2280,7 @@ GameObject:
   - component: {fileID: 1305174008}
   - component: {fileID: 1305174007}
   - component: {fileID: 1305174006}
+  - component: {fileID: 1305174010}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -2374,6 +2375,27 @@ Transform:
   m_Father: {fileID: 254018054}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1305174010
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305174005}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10, y: 2.220446e-16, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1335649318
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3510,7 +3532,8 @@ GameObject:
   - component: {fileID: 1711181687}
   - component: {fileID: 1711181686}
   - component: {fileID: 1711181685}
-  - component: {fileID: 1711181689}
+  - component: {fileID: 1711181690}
+  - component: {fileID: 1711181691}
   m_Layer: 0
   m_Name: trashball
   m_TagString: Untagged
@@ -3604,7 +3627,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1711181689
+--- !u!54 &1711181690
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1711181684}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 0
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &1711181691
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3616,7 +3666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aca25d996dd64507888cca75a4885f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  graspingRadius: 0.3
+  graspingRadius: 0.1
 --- !u!1 &1762622200
 GameObject:
   m_ObjectHideFlags: 0

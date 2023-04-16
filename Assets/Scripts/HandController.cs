@@ -42,12 +42,25 @@ public class HandController : MonoBehaviour {
 	}
 
 
+	protected void print_velocity(){ 
+		Vector3 velocity = OVRInput.GetLocalControllerVelocity(OVRInput.Controller.LTouch);
+		Vector3 velocity2 = OVRInput.GetLocalControllerVelocity(OVRInput.Controller.RTouch);
+		Debug.Log( "update left speed {0} " + velocity.ToString());
+		Debug.Log( "update right speed {0} " + velocity2.ToString());
+	}
+
+	protected Vector3 throw_velocity = new Vector3(0,0,0);
+	protected Vector3 throw_angular_velocity = new Vector3(0,0,0);
+	protected void get_velocity(){ 
+		Vector3 throw_velocity = OVRInput.GetLocalControllerVelocity(OVRInput.Controller.RTouch);
+		Vector3 throw_angular_velocity = OVRInput.GetLocalControllerAngularVelocity(OVRInput.Controller.RTouch);
+		Debug.Log(" get_velocity() {0} {1} " + throw_velocity + throw_angular_velocity); 
+
+	}
+
 	// Automatically called at each frame
 	void Update () { 
-		handle_controller_behavior();
-		Debug.LogWarningFormat( "update left speed is ", OVRInput.GetLocalControllerVelocity( OVRInput.Controller.LTouch ));
-		Debug.LogWarningFormat( "update right speed is ", OVRInput.GetLocalControllerVelocity( OVRInput.Controller.RTouch ));
- 
+		handle_controller_behavior(); 
 	}
 
 
@@ -110,10 +123,6 @@ public class HandController : MonoBehaviour {
 				// Grab this object
 				object_grasped.attach_to( this );
 
-				// Log the speed of the hand 
-				Debug.LogWarningFormat( "left speed is ", OVRInput.GetLocalControllerVelocity( OVRInput.Controller.LTouch ));
-				Debug.LogWarningFormat( "right speed is ", OVRInput.GetLocalControllerVelocity( OVRInput.Controller.RTouch ));
-
 			}
 
 
@@ -126,6 +135,17 @@ public class HandController : MonoBehaviour {
 
 			// Release the object
 			object_grasped.detach_from( this );
+
+
+			// Move the object -- yiyuan
+			// print_velocity();
+			get_velocity();
+			object_grasped.throw_to(throw_velocity, throw_angular_velocity); 
+			
+			// print speed when throwing
+			Debug.Log("hand releasing thrown supposedly ");
+			
+
 
 		
 		}
