@@ -28,7 +28,7 @@ public class ObjectAnchor : MonoBehaviour {
 			this.GetComponent<Rigidbody>().isKinematic = false; 
 			Debug.Log("kineamtic set to true "); 
 
-			this.GetComponent<Rigidbody>().AddForce(3, 3, 3); 
+			this.GetComponent<Rigidbody>().AddForce(linearVelocity); 
 			Debug.Log("throw to called, two vectors {0} {1} " + linearVelocity.ToString() + angularVelocity.ToString());
 		}
 		

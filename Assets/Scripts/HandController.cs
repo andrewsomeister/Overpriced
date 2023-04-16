@@ -135,8 +135,6 @@ public class HandController : MonoBehaviour {
 
 			// Release the object
 			object_grasped.detach_from( this );
-
-
 			// Move the object -- yiyuan
 			// print_velocity();
 			get_velocity();
