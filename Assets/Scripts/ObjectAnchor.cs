@@ -11,22 +11,32 @@ public class ObjectAnchor : MonoBehaviour {
 		initial_transform_parent = transform.parent;
 	}
 
-
 	// Store the hand controller this object will be attached to
 	protected HandController hand_controller = null;
 
-	public void throw_to ( Vector3 linearVelocity, Vector3 angularVelocity) {
+	public void stop_moving (GameObject trashcan) {
+		Vector3 zeroforce = new Vector3 (0,0,0);
+		this.GetComponent<Rigidbody>().AddForce(zeroforce); 
+		this.GetComponent<Rigidbody>().isKinematic = true;
+		Debug.Log("Inside stop moving "); 
+		transform.localScale = new Vector3(0.2F, 0.2F, 0.2F);
+		transform.SetParent( trashcan.transform );
+		transform.localPosition = new Vector3(0, 0.3F, 0);
+		Debug.Log("stop moving parent is " + transform.parent.ToString()); 
+		Debug.Log("current position is " + transform.position.ToString() );
+		Debug.Log("current local position is " + transform.localPosition.ToString() );
+	}
+
+	public void throw_to ( Vector3 linearVelocity) {
 		// Make sure that the object is not attached to a hand controller
 		if ( hand_controller != null ) return;
-		Debug.Log("inside throw_to () " + linearVelocity.ToString() + angularVelocity.ToString()); 
+		Debug.Log("inside throw_to () " + linearVelocity.ToString() ); 
 		// Move the object to the given position
 		if (this.GetComponent<Rigidbody>() != null) {
 			// linearVelocity = new Vector3 (10,10,10); 
 			// angularVelocity = new Vector3 (1,1,2);
 			this.GetComponent<Rigidbody>().isKinematic = false; 
-			Debug.Log("kineamtic set to true "); 
 			this.GetComponent<Rigidbody>().AddForce(linearVelocity*10); 
-
 		}
 	}
 

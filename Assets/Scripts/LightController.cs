@@ -9,6 +9,7 @@ public class LightController : Controller
     public LightSwitch lightSwitch;
     
     // Start is called before the first frame update
+    // this is used to add the callback function to the lightswitch
     void Start()
     {
         lightSwitch.on_toggled( // passing the callback function 

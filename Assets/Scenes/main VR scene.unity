@@ -664,7 +664,7 @@ GameObject:
   - component: {fileID: 484688562}
   m_Layer: 0
   m_Name: trashball (1)
-  m_TagString: Untagged
+  m_TagString: trashball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -788,7 +788,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 484688561}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.75, y: 1.15, z: 2.21}
+  m_LocalPosition: {x: -5.86, y: 1.15, z: -0.6}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1427,7 +1427,7 @@ GameObject:
   - component: {fileID: 761341424}
   m_Layer: 0
   m_Name: trashball (2)
-  m_TagString: Untagged
+  m_TagString: trashball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1551,7 +1551,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 761341423}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.75, y: 1.15, z: 3.43}
+  m_LocalPosition: {x: -5.72, y: 1.15, z: 0.52}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3353,19 +3353,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bb8e6b9ec4bb24774951d2c722f83710, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 1.35
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bb8e6b9ec4bb24774951d2c722f83710, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 1.35
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bb8e6b9ec4bb24774951d2c722f83710, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 1.35
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bb8e6b9ec4bb24774951d2c722f83710, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.76
+      value: -8.65
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bb8e6b9ec4bb24774951d2c722f83710, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3373,7 +3373,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bb8e6b9ec4bb24774951d2c722f83710, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.58
+      value: -0.44
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bb8e6b9ec4bb24774951d2c722f83710, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3411,6 +3411,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: trashcan
       objectReference: {fileID: 0}
+    - target: {fileID: 6794322383260258922, guid: bb8e6b9ec4bb24774951d2c722f83710, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4238c2422e0484e83b2c707e00f5e2d1, type: 2}
+    - target: {fileID: 6839251512214605407, guid: bb8e6b9ec4bb24774951d2c722f83710, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 22.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 6839251512214605407, guid: bb8e6b9ec4bb24774951d2c722f83710, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 20.628534
+      objectReference: {fileID: 0}
+    - target: {fileID: 6839251512214605407, guid: bb8e6b9ec4bb24774951d2c722f83710, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 26.92039
+      objectReference: {fileID: 0}
+    - target: {fileID: 6839251512214605407, guid: bb8e6b9ec4bb24774951d2c722f83710, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 8174907068477135312, guid: bb8e6b9ec4bb24774951d2c722f83710, type: 3}
@@ -3421,14 +3441,41 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bb8e6b9ec4bb24774951d2c722f83710, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1653472336}
+      addedObject: {fileID: 1653472339}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bb8e6b9ec4bb24774951d2c722f83710, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1653472338}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bb8e6b9ec4bb24774951d2c722f83710, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1653472340}
   m_SourcePrefab: {fileID: 100100000, guid: bb8e6b9ec4bb24774951d2c722f83710, type: 3}
 --- !u!1 &1653472335 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bb8e6b9ec4bb24774951d2c722f83710, type: 3}
   m_PrefabInstance: {fileID: 1653472334}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1653472336
+--- !u!65 &1653472338
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653472335}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1653472339
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3437,10 +3484,106 @@ MonoBehaviour:
   m_GameObject: {fileID: 1653472335}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8aca25d996dd64507888cca75a4885f4, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a9b01d014cfd4cbe8b38b4b630b474d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  graspingRadius: 0.1
+  clip: {fileID: 8300000, guid: 52320e590bf774734a288886eba557ba, type: 3}
+--- !u!82 &1653472340
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653472335}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1687354118
 GameObject:
   m_ObjectHideFlags: 0
@@ -3653,7 +3796,7 @@ GameObject:
   - component: {fileID: 1711181691}
   m_Layer: 0
   m_Name: trashball
-  m_TagString: Untagged
+  m_TagString: trashball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3737,7 +3880,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1711181684}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.75, y: 1.17, z: 1.15}
+  m_LocalPosition: {x: -5.76, y: 1.15, z: -2.07}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
