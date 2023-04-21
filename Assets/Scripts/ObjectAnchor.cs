@@ -18,20 +18,16 @@ public class ObjectAnchor : MonoBehaviour {
 	public void throw_to ( Vector3 linearVelocity, Vector3 angularVelocity) {
 		// Make sure that the object is not attached to a hand controller
 		if ( hand_controller != null ) return;
-		Debug.Log("inside throw_to () "); 
+		Debug.Log("inside throw_to () " + linearVelocity.ToString() + angularVelocity.ToString()); 
 		// Move the object to the given position
 		if (this.GetComponent<Rigidbody>() != null) {
-			
-			Debug.Log("inside throw_to () if condition "); 
-			linearVelocity = new Vector3 (10,10,10); 
-			angularVelocity = new Vector3 (1,1,2);
+			// linearVelocity = new Vector3 (10,10,10); 
+			// angularVelocity = new Vector3 (1,1,2);
 			this.GetComponent<Rigidbody>().isKinematic = false; 
 			Debug.Log("kineamtic set to true "); 
+			this.GetComponent<Rigidbody>().AddForce(linearVelocity*10); 
 
-			this.GetComponent<Rigidbody>().AddForce(linearVelocity); 
-			Debug.Log("throw to called, two vectors {0} {1} " + linearVelocity.ToString() + angularVelocity.ToString());
 		}
-		
 	}
 
 	public void attach_to ( HandController hand_controller ) {

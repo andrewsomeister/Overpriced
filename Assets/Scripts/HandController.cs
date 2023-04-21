@@ -51,11 +51,11 @@ public class HandController : MonoBehaviour {
 
 	protected Vector3 throw_velocity = new Vector3(0,0,0);
 	protected Vector3 throw_angular_velocity = new Vector3(0,0,0);
-	protected void get_velocity(){ 
+	protected Vector3 get_velocity(){ 
 		Vector3 throw_velocity = OVRInput.GetLocalControllerVelocity(OVRInput.Controller.RTouch);
 		Vector3 throw_angular_velocity = OVRInput.GetLocalControllerAngularVelocity(OVRInput.Controller.RTouch);
 		Debug.Log(" get_velocity() {0} {1} " + throw_velocity + throw_angular_velocity); 
-
+		return throw_velocity;
 	}
 
 	// Automatically called at each frame
@@ -124,28 +124,23 @@ public class HandController : MonoBehaviour {
 				object_grasped.attach_to( this );
 
 			}
-
-
 		//==============================================//
 		// Define the behavior when the hand get opened //
 		//==============================================//
 		} else if ( object_grasped != null ) {
 			// Log the release
-			Debug.LogWarningFormat("{0} released {1}", this.transform.parent.name, object_grasped.name );
+			Debug.LogWarningFormat("{0} released {1}", this.transform.parent.name, object_grasped.name);
 
 			// Release the object
 			object_grasped.detach_from( this );
 			// Move the object -- yiyuan
 			// print_velocity();
-			get_velocity();
-			object_grasped.throw_to(throw_velocity, throw_angular_velocity); 
+			Vector3 linearVelocity = get_velocity();
+			object_grasped.throw_to(linearVelocity, throw_angular_velocity); 
 			
 			// print speed when throwing
 			Debug.Log("hand releasing thrown supposedly ");
 			
-
-
-		
 		}
 	}
 }
