@@ -7,7 +7,7 @@ public class ObjectAnchor : MonoBehaviour
     // Store initial transform parent
     protected Transform initial_transform_parent;
 
-    private Rigidbody _rigidbody;
+    private Rigidbody _rigidbody; // optional
     private bool _hasRigidBody;
 
     void Start()
@@ -45,7 +45,7 @@ public class ObjectAnchor : MonoBehaviour
         // Store the hand controller in memory
         this.hand_controller = hand_controller;
 
-        // Set rigid body to kinematic so object moves with the parent (transform-based motion)
+        // Set Rigidbody to kinematic so object moves with the parent (transform-based motion)
         // NOTE: seemingly has to be done before SetParent() to work
         if (_hasRigidBody)
         {
@@ -65,7 +65,7 @@ public class ObjectAnchor : MonoBehaviour
 
         // Set the object to be placed in the original transform parent
         transform.SetParent(initial_transform_parent);
-        // No longer a kinematic rigid body after 1st grab
+        // No longer a kinematic Rigidbody after 1st grab
         // i.e. grabbable objects start to have collision effect & physics-based motion
         // after being moved away from initial position in scene
         if (_hasRigidBody)
