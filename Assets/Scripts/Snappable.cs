@@ -6,7 +6,7 @@ public class Snappable : MonoBehaviour
     private bool _isSnapped;
 
     [Header("Snap Object")] public GameObject snapObject; // object that can snap onto this object
-    private ObjectAnchor _grabbable; // mandatory
+    private Grabbable _grabbable; // mandatory
     private Rigidbody _rigidbody; // mandatory
     [Header("Snap Zone")] public GameObject snapZone;
 
@@ -30,7 +30,7 @@ public class Snappable : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _grabbable = snapObject.GetComponent<ObjectAnchor>();
+        _grabbable = snapObject.GetComponent<Grabbable>();
         _rigidbody = snapObject.GetComponent<Rigidbody>();
     }
 

@@ -16,10 +16,10 @@ public class HandController : MonoBehaviour {
 	// Store all gameobjects containing an Anchor
 	// N.B. This list is static as it is the same list for all hands controller
 	// thus there is no need to duplicate it for each instance
-	static protected ObjectAnchor[] anchors_in_the_scene;
+	static protected Grabbable[] anchors_in_the_scene;
 	void Start () {
 		// Prevent multiple fetch
-		if ( anchors_in_the_scene == null ) anchors_in_the_scene = GameObject.FindObjectsOfType<ObjectAnchor>();
+		if ( anchors_in_the_scene == null ) anchors_in_the_scene = GameObject.FindObjectsOfType<Grabbable>();
 	}
 
 
@@ -69,7 +69,7 @@ public class HandController : MonoBehaviour {
 
 	// Store the object atached to this hand
 	// N.B. This can be extended by using a list to attach several objects at the same time
-	protected ObjectAnchor object_grasped = null;
+	protected Grabbable object_grasped = null;
 
 	/// <summary>
 	/// This method handles the linking of object anchors to this hand controller
