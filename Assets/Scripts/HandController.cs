@@ -42,27 +42,16 @@ public class HandController : MonoBehaviour {
 	}
 
 
-	protected void print_velocity(){ 
-		Vector3 velocity = OVRInput.GetLocalControllerVelocity(OVRInput.Controller.LTouch);
-		Vector3 velocity2 = OVRInput.GetLocalControllerVelocity(OVRInput.Controller.RTouch);
-		Debug.Log( "update left speed {0} " + velocity.ToString());
-		Debug.Log( "update right speed {0} " + velocity2.ToString());
-	}
-
-	protected Vector3 throw_velocity = new Vector3(0,0,0);
-	protected Vector3 throw_angular_velocity = new Vector3(0,0,0);
-	protected void get_velocity(){ 
+	protected Vector3 get_velocity(){ 
 		Vector3 throw_velocity = OVRInput.GetLocalControllerVelocity(OVRInput.Controller.RTouch);
-		Vector3 throw_angular_velocity = OVRInput.GetLocalControllerAngularVelocity(OVRInput.Controller.RTouch);
-		Debug.Log(" get_velocity() {0} {1} " + throw_velocity + throw_angular_velocity); 
-
+		Debug.Log(" get_velocity() {0} {1} " + throw_velocity); 
+		return throw_velocity;
 	}
 
 	// Automatically called at each frame
 	void Update () { 
 		handle_controller_behavior(); 
 	}
-
 
 	// Store the previous state of triggers to detect edges
 	protected bool is_hand_closed_previous_frame = false;
@@ -85,7 +74,6 @@ public class HandController : MonoBehaviour {
 		// Define the behavior when the hand get closed //
 		//==============================================//
 		if ( hand_closed ) {
-
 			// Log hand action detection
 			Debug.LogWarningFormat( "{0} get closed", this.transform.parent.name );
 
@@ -124,28 +112,23 @@ public class HandController : MonoBehaviour {
 				object_grasped.attach_to( this );
 
 			}
-
-
 		//==============================================//
 		// Define the behavior when the hand get opened //
 		//==============================================//
 		} else if ( object_grasped != null ) {
 			// Log the release
-			Debug.LogWarningFormat("{0} released {1}", this.transform.parent.name, object_grasped.name );
+			Debug.LogWarningFormat("{0} released {1}", this.transform.parent.name, object_grasped.name);
 
 			// Release the object
 			object_grasped.detach_from( this );
 			// Move the object -- yiyuan
 			// print_velocity();
-			get_velocity();
-			object_grasped.throw_to(throw_velocity, throw_angular_velocity); 
+			Vector3 linearVelocity = get_velocity();
+			object_grasped.throw_to(linearVelocity); 
 			
 			// print speed when throwing
 			Debug.Log("hand releasing thrown supposedly ");
 			
-
-
-		
 		}
 	}
 }

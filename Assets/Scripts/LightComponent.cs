@@ -24,15 +24,11 @@ public class LightComponent : MonoBehaviour
     void Update()
     {
         if (lightState == true) {
-            lightcomp.enabled = true;
-            // Debug.LogWarningFormat("_______________Light is On_______________");
-            
+            lightcomp.enabled = true;            
         }
         else {
             lightcomp.enabled = false;
             lightcomp.color = ChangeColor;
-            // Debug.LogWarningFormat("|||||||||||||||||Light is Off ||||||||||||||||||");
-
         }
     }
 }
