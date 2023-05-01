@@ -3,6 +3,7 @@ using UnityEngine;
 public class Grabbable : MonoBehaviour
 {
     [Header("Grasping Properties")] public float graspingRadius = 0.1f;
+    [Header("Throwing Properties")] public float throwingForce = 20f;
 
     // Store the hand controller this object will be attached to
     private HandController _handController;
@@ -28,6 +29,7 @@ public class Grabbable : MonoBehaviour
         Debug.Log("Inside stop moving "); 
         transform.localScale = new Vector3(0.2F, 0.2F, 0.2F);
         transform.SetParent( trashcan.transform );
+        Debug.Log("successfully set parent "); 
         transform.localPosition = new Vector3(0, 0.3F, 0);
         Debug.Log("stop moving parent is " + transform.parent.ToString()); 
         Debug.Log("current position is " + transform.position.ToString() );
@@ -40,10 +42,10 @@ public class Grabbable : MonoBehaviour
         Debug.Log("inside throw_to () " + linearVelocity.ToString() ); 
         // Move the object to the given position
         if (this.GetComponent<Rigidbody>() != null) {
-            // linearVelocity = new Vector3 (10,10,10); 
-            // angularVelocity = new Vector3 (1,1,2);
             this.GetComponent<Rigidbody>().isKinematic = false; 
-            this.GetComponent<Rigidbody>().AddForce(linearVelocity*10); 
+            this.GetComponent<Rigidbody>().AddForce(linearVelocity, ForceMode.Impulse); 
+
+            Debug.Log("thrown already" );
         }
     }
 
