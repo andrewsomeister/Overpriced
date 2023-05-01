@@ -18,7 +18,7 @@ public class TrashObjectAnchor : MonoBehaviour
     {
         
     }
-    protected ObjectAnchor colliding_object;
+    protected Grabbable colliding_object;
 
     void OnTriggerEnter ( Collider other ) {
 
@@ -30,7 +30,7 @@ public class TrashObjectAnchor : MonoBehaviour
         if (other.gameObject.tag == "trashball") {
             Debug.LogWarningFormat("Trash can inside if correct ", other.name );
             source.PlayOneShot(clip);
-            colliding_object = other.gameObject.GetComponent<ObjectAnchor>();
+            colliding_object = other.gameObject.GetComponent<Grabbable>();
             Debug.LogWarningFormat("found object ", other.gameObject);
             colliding_object.stop_moving(this.gameObject); 
         }
