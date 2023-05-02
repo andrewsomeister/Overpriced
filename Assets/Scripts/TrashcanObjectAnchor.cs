@@ -5,12 +5,12 @@ using UnityEngine;
 public class TrashObjectAnchor : MonoBehaviour
 {
     public AudioClip clip; // the sound to play when hit
-    private AudioSource source; // the object that can play the sound
+    private AudioSource audioSource; // the object that can play the sound
 
     // Start is called before the first frame update
     void Start()
     {
-        source = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -29,7 +29,7 @@ public class TrashObjectAnchor : MonoBehaviour
         
         if (other.gameObject.tag == "trashball") {
             Debug.LogWarningFormat("Trash can inside if correct ", other.name );
-            source.PlayOneShot(clip);
+            audioSource.PlayOneShot(clip);
             colliding_object = other.gameObject.GetComponent<Grabbable>();
             Debug.LogWarningFormat("found object ", other.gameObject);
             colliding_object.stop_moving(this.gameObject); 
