@@ -6,6 +6,8 @@ TagManager:
   tags:
   - trashball
   - knife
+  - pan
+  - PlayerHand
   layers:
   - Default
   - TransparentFX

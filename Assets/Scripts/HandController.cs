@@ -24,7 +24,7 @@ public class HandController : MonoBehaviour {
 
 
 	// This method checks that the hand is closed depending on the hand side
-	protected bool is_hand_closed () {
+	public bool is_hand_closed () {
 		// Case of a left hand
 		if ( handType == HandType.LeftHand ) return
 			OVRInput.Get( OVRInput.Button.Three )                           // Check that the A button is pressed
