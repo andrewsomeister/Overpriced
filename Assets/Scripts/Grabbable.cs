@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class Grabbable : MonoBehaviour
 {
@@ -9,16 +10,37 @@ public class Grabbable : MonoBehaviour
     private HandController _handController;
     private bool _isAvailable = true;
 
+    //regernation logic
+    public bool regenerates = false; // Set this to true for objects that should regenerate
+    public float regenerationTime = 5f;
+    private Vector3 originalPosition;
+    private Quaternion originalRotation;
+    private GameObject originalParent;
+    private bool isRegenerating = false;
+
     // Store initial transform parent
     private Transform _initialTransformParent;
     private Rigidbody _rigidbody; // optional
     private bool _hasRigidBody;
+
+    //For doorscript
+    private DoorScript doorScript;
+    // Store the initial hand position when grabbing
+    private Vector3 initialHandPosition;
+    // Whether the door is currently being grabbed
+    private bool isGrabbing;
 
     void Start()
     {
         _initialTransformParent = transform.parent;
         _rigidbody = GetComponent<Rigidbody>();
         _hasRigidBody = _rigidbody != null;
+        
+        doorScript = GetComponent<DoorScript>();
+        if (doorScript != null) { doorScript.OpenDoor(1); }
+
+        
+        //originalParent = transform.parent.gameObject;
     }
 
     // todo refactor & clean up: move/initialize expensive calls in Start(); comment/remove logs after done testing 
@@ -48,9 +70,16 @@ public class Grabbable : MonoBehaviour
             Debug.Log("thrown already" );
         }
     }
+    public bool HasBeenGrabbed { get; private set; }
+
 
     public void attach_to(HandController handController)
     {
+        HasBeenGrabbed = true;
+        if (regenerates && !isRegenerating)
+        {
+            StartCoroutine(Regenerate());
+        }
         // Store the hand controller in memory
         _handController = handController;
         _isAvailable = false;
@@ -61,13 +90,20 @@ public class Grabbable : MonoBehaviour
         {
             _rigidbody.isKinematic = true;
         }
-
+        originalPosition = transform.position;
+        originalRotation = transform.rotation;
         // Set the object to be placed in the hand controller referential
         transform.SetParent(handController.transform);
+       
     }
 
     public void detach_from(HandController handController)
     {
+        HasBeenGrabbed = false;
+        if (regenerates)
+        {
+            isRegenerating = false;
+        }
         // Make sure that the right hand controller ask for the release
         if (_handController != handController) return;
 
@@ -84,7 +120,38 @@ public class Grabbable : MonoBehaviour
         {
             _rigidbody.isKinematic = false;
         }
+
     }
+    IEnumerator Regenerate()
+    {
+        isRegenerating = true;
+
+        // Wait for the specified time
+        yield return new WaitForSeconds(regenerationTime);
+
+        // Create a new instance of the object at the original position and rotation
+        GameObject newItem = Instantiate(gameObject, originalPosition, originalRotation);//originalParent.transform);
+
+
+    
+
+        // Get the Grabbable component of the new item
+        //Grabbable newGrabbable = newItem.GetComponent<Grabbable>();
+
+        //if (newGrabbable != null)
+        //{
+            // Enable regeneration on the new item
+            //newGrabbable.regenerates = true;
+            //newGrabbable.isRegenerating = false;
+        //}
+
+        // Disable regeneration on the current item
+        regenerates = false;
+
+        isRegenerating = false;
+    }
+
+
 
     public bool is_available()
     {
@@ -95,4 +162,5 @@ public class Grabbable : MonoBehaviour
     {
         return graspingRadius;
     }
+
 }
