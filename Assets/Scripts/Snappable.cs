@@ -5,10 +5,10 @@ public class Snappable : MonoBehaviour
     private bool _isSnappable;
     private bool _isSnapped;
 
-    [Header("Snap Object")] public GameObject snapObject; // object that can snap onto this object's snap zone
+    public GameObject snapObject; // object that can snap onto this object's snap zone
     private Grabbable _grabbable; // snap object must have grabbable script attached
     private Rigidbody _rigidbody; // snap object must have a rigidbody
-    [Header("Snap Zone")] public GameObject snapZone;
+    public GameObject snapZone;
 
 
     private void OnTriggerEnter(Collider other)
