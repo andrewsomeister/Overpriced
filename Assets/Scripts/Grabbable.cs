@@ -39,9 +39,8 @@ public class Grabbable : MonoBehaviour
         doorScript = GetComponent<DoorScript>();
         if (doorScript != null) { doorScript.OpenDoor(1); }
 
-        originalPosition = transform.position;
-        originalRotation = transform.rotation;
-        originalParent = transform.parent.gameObject;
+        
+        //originalParent = transform.parent.gameObject;
     }
 
     // todo refactor & clean up: move/initialize expensive calls in Start(); comment/remove logs after done testing 
@@ -91,7 +90,8 @@ public class Grabbable : MonoBehaviour
         {
             _rigidbody.isKinematic = true;
         }
-
+        originalPosition = transform.position;
+        originalRotation = transform.rotation;
         // Set the object to be placed in the hand controller referential
         transform.SetParent(handController.transform);
        
@@ -130,7 +130,7 @@ public class Grabbable : MonoBehaviour
         yield return new WaitForSeconds(regenerationTime);
 
         // Create a new instance of the object at the original position and rotation
-        GameObject newItem = Instantiate(gameObject, originalPosition, originalRotation, originalParent.transform);
+        GameObject newItem = Instantiate(gameObject, originalPosition, originalRotation);//originalParent.transform);
 
 
     

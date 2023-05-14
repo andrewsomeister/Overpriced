@@ -8398,7 +8398,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6398883658879040003, guid: 2b7c965ce965046faab61e0ccfefac3b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -6398883658879040003, guid: 2b7c965ce965046faab61e0ccfefac3b, type: 3}
       propertyPath: m_LocalRotation.x
@@ -8406,7 +8406,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6398883658879040003, guid: 2b7c965ce965046faab61e0ccfefac3b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -6398883658879040003, guid: 2b7c965ce965046faab61e0ccfefac3b, type: 3}
       propertyPath: m_LocalRotation.z
@@ -8418,7 +8418,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6398883658879040003, guid: 2b7c965ce965046faab61e0ccfefac3b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: -6398883658879040003, guid: 2b7c965ce965046faab61e0ccfefac3b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -33905,7 +33905,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   graspingRadius: 0.2
   throwingForce: 20
-  regenerates: 0
+  regenerates: 1
   regenerationTime: 5
 --- !u!4 &1957751306 stripped
 Transform:
@@ -37071,7 +37071,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1881977214561321726, guid: 5d7c32980bfa24899b4fce146e037988, type: 3}
       propertyPath: regenerates
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5764135195221458436, guid: 5d7c32980bfa24899b4fce146e037988, type: 3}
       propertyPath: m_UseGravity
