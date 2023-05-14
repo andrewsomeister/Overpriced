@@ -75,7 +75,7 @@ public class HandController : MonoBehaviour {
 		//==============================================//
 		if ( hand_closed ) {
 			// Log hand action detection
-			Debug.LogWarningFormat( "{0} get closed", this.transform.parent.name );
+			Debug.LogWarningFormat( "{0} closed", this.transform.parent.name );
 
 			// Determine which object available is the closest from the left hand
 			int best_object_id = -1;
