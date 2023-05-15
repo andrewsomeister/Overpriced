@@ -58,8 +58,10 @@ public class SwingingArms : MonoBehaviour
             - playerDistance;
         _handSpeed = leftHandDistance + rightHandDistance;
 
-        // update player/camera position
-        if (Time.timeSinceLevelLoad > 1f)
+        // update player/camera position when scene is loaded & both triggers are pressed down
+        if (Time.timeSinceLevelLoad > 1f &&
+            OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger) > 0.5
+            && OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger) > 0.5)
         {
             var direction = -forwardDirection.transform.forward;
             var distance = _handSpeed * speedup * Time.deltaTime;
