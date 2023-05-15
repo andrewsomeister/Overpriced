@@ -9,7 +9,7 @@ public class SwingingArms : MonoBehaviour
     public GameObject forwardDirection;
     public GameObject leftHand;
     public GameObject rightHand;
-    public float speedup = 70f;
+    public float speedup = 60f;
 
     private float _handSpeed;
 
@@ -61,15 +61,9 @@ public class SwingingArms : MonoBehaviour
         // update player/camera position
         if (Time.timeSinceLevelLoad > 1f)
         {
-            var direction = forwardDirection.transform.forward;
+            var direction = -forwardDirection.transform.forward;
             var distance = _handSpeed * speedup * Time.deltaTime;
             transform.position += direction * distance;
-
-            Debug.LogWarningFormat("direction: {0}\n" +
-                                   "hand speed: {1}\n" +
-                                   "distance: {2}\n" +
-                                   "camera: {3}\n",
-                direction, _handSpeed, distance, transform.position);
         }
 
         // update previous positions 
