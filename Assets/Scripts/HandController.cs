@@ -50,8 +50,8 @@ public class HandController : MonoBehaviour {
 
 	// Automatically called at each frame
 	void Update () { 
-		handle_controller_behavior(); 
-	}
+		handle_controller_behavior();
+    }
 
 	// Store the previous state of triggers to detect edges
 	protected bool is_hand_closed_previous_frame = false;
@@ -64,9 +64,9 @@ public class HandController : MonoBehaviour {
 	/// This method handles the linking of object anchors to this hand controller
 	/// </summary>
 	protected void handle_controller_behavior () {
-
-		// Check if there is a change in the grasping state (i.e. an edge) otherwise do nothing
-		bool hand_closed = is_hand_closed();
+        anchors_in_the_scene = GameObject.FindObjectsOfType<Grabbable>();
+        // Check if there is a change in the grasping state (i.e. an edge) otherwise do nothing
+        bool hand_closed = is_hand_closed();
 		if ( hand_closed == is_hand_closed_previous_frame ) return;
 		is_hand_closed_previous_frame = hand_closed;
 
@@ -124,10 +124,10 @@ public class HandController : MonoBehaviour {
 			// Move the object -- yiyuan
 			// print_velocity();
 			Vector3 linearVelocity = get_velocity();
-			object_grasped.throw_to(linearVelocity); 
-			
-			// print speed when throwing
-			Debug.Log("hand releasing thrown supposedly ");
+            object_grasped.throw_to(linearVelocity);
+            //object_grasped.detach_from(this);
+            // print speed when throwing
+            Debug.Log("hand releasing thrown supposedly ");
 			
 		}
 	}

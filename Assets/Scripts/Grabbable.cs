@@ -12,10 +12,9 @@ public class Grabbable : MonoBehaviour
 
     //regernation logic
     public bool regenerates = false; // Set this to true for objects that should regenerate
-    public float regenerationTime = 5f;
     private Vector3 originalPosition;
     private Quaternion originalRotation;
-    private GameObject originalParent;
+    private Transform originalParent;
     private bool isRegenerating = false;
 
     // Store initial transform parent
@@ -23,24 +22,11 @@ public class Grabbable : MonoBehaviour
     private Rigidbody _rigidbody; // optional
     private bool _hasRigidBody;
 
-    //For doorscript
-    private DoorScript doorScript;
-    // Store the initial hand position when grabbing
-    private Vector3 initialHandPosition;
-    // Whether the door is currently being grabbed
-    private bool isGrabbing;
-
     void Start()
     {
         _initialTransformParent = transform.parent;
         _rigidbody = GetComponent<Rigidbody>();
         _hasRigidBody = _rigidbody != null;
-        
-        doorScript = GetComponent<DoorScript>();
-        if (doorScript != null) { doorScript.OpenDoor(1); }
-
-        
-        //originalParent = transform.parent.gameObject;
     }
 
     // todo refactor & clean up: move/initialize expensive calls in Start(); comment/remove logs after done testing 
@@ -65,7 +51,7 @@ public class Grabbable : MonoBehaviour
         // Move the object to the given position
         if (this.GetComponent<Rigidbody>() != null) {
             this.GetComponent<Rigidbody>().isKinematic = false; 
-            this.GetComponent<Rigidbody>().AddForce(linearVelocity, ForceMode.Impulse); 
+            this.GetComponent<Rigidbody>().AddForce(linearVelocity, ForceMode.Impulse);
 
             Debug.Log("thrown already" );
         }
@@ -75,10 +61,25 @@ public class Grabbable : MonoBehaviour
 
     public void attach_to(HandController handController)
     {
+        originalPosition = transform.position;
+        originalRotation = transform.rotation;
+        originalParent = transform.parent;  
         HasBeenGrabbed = true;
         if (regenerates && !isRegenerating)
         {
-            StartCoroutine(Regenerate());
+           //StartCoroutine(Regenerate());
+            GameObject newItem = Instantiate(gameObject, originalPosition, originalRotation, originalParent);
+
+            // Get the Grabbable component of the new item
+            Grabbable newGrabbable = newItem.GetComponent<Grabbable>();
+
+            if (newGrabbable != null)
+            {
+                // Enable regeneration on the new item
+                newGrabbable.regenerates = true;
+                newGrabbable.isRegenerating = false;
+            }
+            regenerates = false;
         }
         // Store the hand controller in memory
         _handController = handController;
@@ -90,8 +91,9 @@ public class Grabbable : MonoBehaviour
         {
             _rigidbody.isKinematic = true;
         }
-        originalPosition = transform.position;
-        originalRotation = transform.rotation;
+        //originalPosition = transform.position;
+        //originalRotation = transform.rotation;
+        //originalParent = transform.parent;
         // Set the object to be placed in the hand controller referential
         transform.SetParent(handController.transform);
        
@@ -103,6 +105,7 @@ public class Grabbable : MonoBehaviour
         if (regenerates)
         {
             isRegenerating = false;
+            //StartCoroutine(Regenerate());
         }
         // Make sure that the right hand controller ask for the release
         if (_handController != handController) return;
@@ -113,6 +116,7 @@ public class Grabbable : MonoBehaviour
 
         // Set the object to be placed in the original transform parent
         transform.SetParent(_initialTransformParent);
+        
         // No longer a kinematic Rigidbody after 1st grab
         // i.e. grabbable objects start to have collision effect & physics-based motion
         // after being moved away from initial position in scene
@@ -122,36 +126,6 @@ public class Grabbable : MonoBehaviour
         }
 
     }
-    IEnumerator Regenerate()
-    {
-        isRegenerating = true;
-
-        // Wait for the specified time
-        yield return new WaitForSeconds(regenerationTime);
-
-        // Create a new instance of the object at the original position and rotation
-        GameObject newItem = Instantiate(gameObject, originalPosition, originalRotation);//originalParent.transform);
-
-
-    
-
-        // Get the Grabbable component of the new item
-        //Grabbable newGrabbable = newItem.GetComponent<Grabbable>();
-
-        //if (newGrabbable != null)
-        //{
-            // Enable regeneration on the new item
-            //newGrabbable.regenerates = true;
-            //newGrabbable.isRegenerating = false;
-        //}
-
-        // Disable regeneration on the current item
-        regenerates = false;
-
-        isRegenerating = false;
-    }
-
-
 
     public bool is_available()
     {
