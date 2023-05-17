@@ -118,13 +118,14 @@ public class HandController : MonoBehaviour {
 		} else if ( object_grasped != null ) {
 			// Log the release
 			Debug.LogWarningFormat("{0} released {1}", this.transform.parent.name, object_grasped.name);
+            Vector3 linearVelocity = transform.TransformDirection(get_velocity());
 
-			// Release the object
-			object_grasped.detach_from( this );
+            // Release the object
+            object_grasped.detach_from( this, linearVelocity);
 			// Move the object -- yiyuan
 			// print_velocity();
-			Vector3 linearVelocity = get_velocity();
-            object_grasped.throw_to(linearVelocity);
+			//Vector3 linearVelocity = get_velocity();
+            //object_grasped.throw_to(linearVelocity);
             //object_grasped.detach_from(this);
             // print speed when throwing
             Debug.Log("hand releasing thrown supposedly ");

@@ -27,6 +27,7 @@ public class Grabbable : MonoBehaviour
         _initialTransformParent = transform.parent;
         _rigidbody = GetComponent<Rigidbody>();
         _hasRigidBody = _rigidbody != null;
+
     }
 
     // todo refactor & clean up: move/initialize expensive calls in Start(); comment/remove logs after done testing 
@@ -99,7 +100,7 @@ public class Grabbable : MonoBehaviour
        
     }
 
-    public void detach_from(HandController handController)
+    public void detach_from(HandController handController, Vector3 linearVelocity)
     {
         HasBeenGrabbed = false;
         if (regenerates)
@@ -123,6 +124,7 @@ public class Grabbable : MonoBehaviour
         if (_hasRigidBody)
         {
             _rigidbody.isKinematic = false;
+            _rigidbody.velocity = linearVelocity;
         }
 
     }

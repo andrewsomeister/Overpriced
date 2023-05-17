@@ -38,7 +38,7 @@ public class SteakSizzle : MonoBehaviour
         if (isCooking)
         {
             cookProgress += Time.deltaTime;
-            progressBar.transform.localScale = new Vector3(0.05f + cookProgress*0.2f / cookTime, 0.05f + cookProgress * 0.2f / cookTime, 1f);
+            progressBar.transform.localScale = new Vector3(0.05f + cookProgress*0.1f / cookTime, 0.05f + cookProgress * 0.1f / cookTime, 1f);
             progressBar.transform.position = transform.position + Vector3.up * 0.2f;
             progressBar.transform.rotation = Quaternion.Euler(0, 0, 0);
 

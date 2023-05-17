@@ -29,7 +29,12 @@ public class Cuttable : MonoBehaviour
 
     void OnTriggerEnter(Collider other ){
         if (other.gameObject.tag == "knife"){
-            cutCount += 1; 
+            Collider myCollider = GetComponent<Collider>();
+            if (myCollider != null)
+            {
+                Physics.IgnoreCollision(myCollider, other);
+            }
+                cutCount += 1; 
             audioSource.PlayOneShot(cutAudioClip);
             Vector3 point3 = new Vector3(0, 2 * cutCount, 0);
             Instantiate(cutInto, transform.position, transform.rotation);
