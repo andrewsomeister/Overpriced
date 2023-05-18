@@ -44,7 +44,7 @@ public class HandController : MonoBehaviour {
 
 	protected Vector3 get_velocity(){ 
 		Vector3 throw_velocity = OVRInput.GetLocalControllerVelocity(OVRInput.Controller.RTouch);
-		Debug.Log(" get_velocity() {0} {1} " + throw_velocity); 
+		// Debug.Log(" get_velocity() {0} {1} " + throw_velocity); 
 		return throw_velocity;
 	}
 
@@ -75,7 +75,7 @@ public class HandController : MonoBehaviour {
 		//==============================================//
 		if ( hand_closed ) {
 			// Log hand action detection
-			Debug.LogWarningFormat( "{0} closed", this.transform.parent.name );
+			// Debug.LogWarningFormat( "{0} closed", this.transform.parent.name );
 
 			// Determine which object available is the closest from the left hand
 			int best_object_id = -1;
@@ -106,7 +106,7 @@ public class HandController : MonoBehaviour {
 				object_grasped = anchors_in_the_scene[best_object_id];
 
 				// Log the grasp
-				Debug.LogWarningFormat( "{0} grasped {1}", this.transform.parent.name, object_grasped.name );
+				// Debug.LogWarningFormat( "{0} grasped {1}", this.transform.parent.name, object_grasped.name );
 
 				// Grab this object
 				object_grasped.attach_to( this );
@@ -117,7 +117,7 @@ public class HandController : MonoBehaviour {
 		//==============================================//
 		} else if ( object_grasped != null ) {
 			// Log the release
-			Debug.LogWarningFormat("{0} released {1}", this.transform.parent.name, object_grasped.name);
+			// Debug.LogWarningFormat("{0} released {1}", this.transform.parent.name, object_grasped.name);
             Vector3 linearVelocity = transform.TransformDirection(get_velocity());
 
             // Release the object
@@ -128,7 +128,7 @@ public class HandController : MonoBehaviour {
             //object_grasped.throw_to(linearVelocity);
             //object_grasped.detach_from(this);
             // print speed when throwing
-            Debug.Log("hand releasing thrown supposedly ");
+            // Debug.Log("hand releasing thrown supposedly ");
 			
 		}
 	}
