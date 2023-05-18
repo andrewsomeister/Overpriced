@@ -1,0 +1,458 @@
+--------- beginning of main
+05-18 14:01:28.462 24447 24464 I Unity   : Company Name: Group12
+05-18 14:01:28.462 24447 24464 I Unity   : Product Name: Yiyuan_overpriced
+05-18 14:01:28.464 24447 24464 D Unity   : loading library OVRPlugin
+05-18 14:01:28.827 24447 24464 I Unity   : XRGeneral Settings awakening...
+05-18 14:01:28.827 24447 24464 I Unity   : UnityEngine.XR.Management.XRGeneralSettings:Awake()
+05-18 14:01:28.827 24447 24464 I Unity   : 
+05-18 14:01:29.036 24447 24464 D Unity   : initOculus Java!
+05-18 14:01:29.036 24447 24447 D Unity   : Oculus UI thread done.
+05-18 14:01:30.139 24447 24642 W Unity   : The referenced script on this Behaviour (Game Object '3rd Person Controller') is missing!
+05-18 14:01:30.139 24447 24642 W Unity   : The referenced script on this Behaviour (Game Object '3rd Person Controller') is missing!
+05-18 14:01:30.253 24447 24464 D Unity   : initOculus Java!
+05-18 14:01:30.253 24447 24447 D Unity   : Oculus UI thread done.
+05-18 14:01:33.567 24447 24464 E Unity   : DllNotFoundException: Unable to load DLL 'AudioPluginOculusSpatializer'. Tried the load the following dynamic libraries: Unable to load dynamic library 'AudioPluginOculusSpatializer' because of 'Failed to open the requested dynamic library (0x06000000) dlerror() = dlopen failed: library "AudioPluginOculusSpatializer" not found
+05-18 14:01:33.567 24447 24464 E Unity   :   at ONSPAudioSource.OSP_SetGlobalVoiceLimit (System.Int32 VoiceLimit) [0x00000] in <00000000000000000000000000000000>:0 
+05-18 14:01:33.567 24447 24464 E Unity   : 
+05-18 14:01:34.386 24447 24464 I Unity   : Unity v2022.2.9f1, Oculus Utilities v1.82.0, OVRPlugin v1.82.0, SDK v1.0.26.
+05-18 14:01:34.386 24447 24464 I Unity   : OVRManager:InitOVRManager()
+05-18 14:01:34.386 24447 24464 I Unity   : 
+05-18 14:01:34.388 24447 24464 I Unity   : SystemHeadset Oculus_Quest_2, API OpenXR
+05-18 14:01:34.388 24447 24464 I Unity   : OVRManager:InitOVRManager()
+05-18 14:01:34.388 24447 24464 I Unity   : 
+05-18 14:01:34.389 24447 24464 I Unity   : OpenXR instance 0x100000000000002 session 0x200000000000020
+05-18 14:01:34.389 24447 24464 I Unity   : OVRManager:InitOVRManager()
+05-18 14:01:34.389 24447 24464 I Unity   : 
+05-18 14:01:34.392 24447 24464 I Unity   : OVRPlugin.Media not initialized
+05-18 14:01:34.392 24447 24464 I Unity   : OVRManager:StaticInitializeMixedRealityCapture(OVRMixedRealityCaptureConfiguration)
+05-18 14:01:34.392 24447 24464 I Unity   : OVRManager:InitOVRManager()
+05-18 14:01:34.392 24447 24464 I Unity   : 
+05-18 14:01:34.396 24447 24464 I Unity   : Current display frequency 72, available frequencies [60, 60, 72, 72, 80, 80, 90, 90, 120, 120]
+05-18 14:01:34.396 24447 24464 I Unity   : OVRManager:InitOVRManager()
+05-18 14:01:34.396 24447 24464 I Unity   : 
+05-18 14:01:34.398 24447 24464 W Unity   : Local Dimming feature is not supported
+05-18 14:01:34.398 24447 24464 W Unity   : OVRManager:InitOVRManager()
+05-18 14:01:34.398 24447 24464 W Unity   : 
+05-18 14:01:34.410 24447 24464 I Unity   : Inside start door 
+05-18 14:01:34.413 24447 24464 I Unity   : OVRControllerHelp: Active controller type: Quest2 for product Oculus Quest (headset Oculus_Quest_2, hand HandRight)
+05-18 14:01:34.413 24447 24464 I Unity   : OVRControllerHelper:InitializeControllerModels()
+05-18 14:01:34.413 24447 24464 I Unity   : 
+05-18 14:01:34.416 24447 24464 I Unity   : OVRControllerHelp: Active controller type: Quest2 for product Oculus Quest (headset Oculus_Quest_2, hand HandLeft)
+05-18 14:01:34.416 24447 24464 I Unity   : OVRControllerHelper:InitializeControllerModels()
+05-18 14:01:34.416 24447 24464 I Unity   : 
+05-18 14:01:34.421 24447 24464 W Unity   : OnTriggerEnter() OVRPlayerController 
+05-18 14:01:34.421 24447 24464 W Unity   : MainPlayerController:OnTriggerEnter(Collider)
+05-18 14:01:34.421 24447 24464 W Unity   : 
+05-18 14:01:34.421 24447 24464 W Unity   : OnTriggerEnter() OVRPlayerController 
+05-18 14:01:34.421 24447 24464 W Unity   : MainPlayerController:OnTriggerEnter(Collider)
+05-18 14:01:34.421 24447 24464 W Unity   : 
+05-18 14:01:34.422 24447 24464 I Unity   : Inside Door OnTriggerEnter 
+05-18 14:01:34.422 24447 24464 I Unity   : DoorScript:OnTriggerEnter(Collider)
+05-18 14:01:34.422 24447 24464 I Unity   : 
+05-18 14:01:34.422 24447 24464 I Unity   : Inside Door OnTriggerEnter 
+05-18 14:01:34.422 24447 24464 I Unity   : DoorScript:OnTriggerEnter(Collider)
+05-18 14:01:34.422 24447 24464 I Unity   : 
+05-18 14:01:34.427 24447 24464 I Unity   : The current MSAA level is 0, but the recommended MSAA level is 4. Switching to the recommended level.
+05-18 14:01:34.427 24447 24464 I Unity   : OVRManager:Update()
+05-18 14:01:34.427 24447 24464 I Unity   : 
+05-18 14:01:34.427 24447 24464 I Unity   : [OVRManager] HMDAcquired event
+05-18 14:01:34.427 24447 24464 I Unity   : OVRManager:Update()
+05-18 14:01:34.427 24447 24464 I Unity   : 
+05-18 14:01:34.428 24447 24464 I Unity   : [OVRManager] HMDMounted event
+05-18 14:01:34.428 24447 24464 I Unity   : OVRManager:Update()
+05-18 14:01:34.428 24447 24464 I Unity   : 
+05-18 14:01:34.429 24447 24464 I Unity   : [OVRManager] VrFocusAcquired event
+05-18 14:01:34.429 24447 24464 I Unity   : OVRManager:Update()
+05-18 14:01:34.429 24447 24464 I Unity   : 
+05-18 14:01:34.431 24447 24464 I Unity   : [OVRManager] TrackingAcquired event
+05-18 14:01:34.431 24447 24464 I Unity   : OVRManager:Update()
+05-18 14:01:34.431 24447 24464 I Unity   : 
+05-18 14:01:34.432 24447 24464 I Unity   : Recenter event detected
+05-18 14:01:34.432 24447 24464 I Unity   : OVRDisplay:Update()
+05-18 14:01:34.432 24447 24464 I Unity   : OVRManager:Update()
+05-18 14:01:34.432 24447 24464 I Unity   : 
+05-18 14:01:34.980 24447 24464 W Unity   : Ignoring depth surface store action as it is memoryless
+05-18 14:01:35.080 24447 24464 W Unity   : OnTriggerEnter() OVRPlayerController 
+05-18 14:01:35.080 24447 24464 W Unity   : MainPlayerController:OnTriggerEnter(Collider)
+05-18 14:01:35.080 24447 24464 W Unity   : 
+05-18 14:01:35.081 24447 24464 W Unity   : OnTriggerEnter() OVRPlayerController 
+05-18 14:01:35.081 24447 24464 W Unity   : MainPlayerController:OnTriggerEnter(Collider)
+05-18 14:01:35.081 24447 24464 W Unity   : 
+05-18 14:01:36.839 24447 24464 W Unity   : OnTriggerEnter() OVRPlayerController 
+05-18 14:01:36.839 24447 24464 W Unity   : MainPlayerController:OnTriggerEnter(Collider)
+05-18 14:01:36.839 24447 24464 W Unity   : 
+05-18 14:01:37.696 24447 24464 W Unity   : OnTriggerEnter() OVRPlayerController 
+05-18 14:01:37.696 24447 24464 W Unity   : MainPlayerController:OnTriggerEnter(Collider)
+05-18 14:01:37.696 24447 24464 W Unity   : 
+05-18 14:01:37.752 24447 24464 W Unity   : OnTriggerEnter() OVRPlayerController 
+05-18 14:01:37.752 24447 24464 W Unity   : MainPlayerController:OnTriggerEnter(Collider)
+05-18 14:01:37.752 24447 24464 W Unity   : 
+05-18 14:01:37.794 24447 24464 W Unity   : OnTriggerEnter() OVRPlayerController 
+05-18 14:01:37.794 24447 24464 W Unity   : MainPlayerController:OnTriggerEnter(Collider)
+05-18 14:01:37.794 24447 24464 W Unity   : 
+05-18 14:01:38.296 24447 24464 W Unity   : OnTriggerEnter() OVRPlayerController 
+05-18 14:01:38.296 24447 24464 W Unity   : MainPlayerController:OnTriggerEnter(Collider)
+05-18 14:01:38.296 24447 24464 W Unity   : 
+05-18 14:01:38.323 24447 24464 W Unity   : OnTriggerEnter() OVRPlayerController 
+05-18 14:01:38.323 24447 24464 W Unity   : MainPlayerController:OnTriggerEnter(Collider)
+05-18 14:01:38.323 24447 24464 W Unity   : 
+05-18 14:01:38.671 24447 24464 W Unity   : OnTriggerEnter() OVRPlayerController 
+05-18 14:01:38.671 24447 24464 W Unity   : MainPlayerController:OnTriggerEnter(Collider)
+05-18 14:01:38.671 24447 24464 W Unity   : 
+05-18 14:01:39.197 24447 24464 W Unity   : OnTriggerEnter() OVRPlayerController 
+05-18 14:01:39.197 24447 24464 W Unity   : MainPlayerController:OnTriggerEnter(Collider)
+05-18 14:01:39.197 24447 24464 W Unity   : 
+05-18 14:01:39.239 24447 24464 W Unity   : OnTriggerEnter() OVRPlayerController 
+05-18 14:01:39.239 24447 24464 W Unity   : MainPlayerController:OnTriggerEnter(Collider)
+05-18 14:01:39.239 24447 24464 W Unity   : 
+05-18 14:01:47.207 24447 24464 W Unity   : OnTriggerEnter() OVRPlayerController 
+05-18 14:01:47.207 24447 24464 W Unity   : MainPlayerController:OnTriggerEnter(Collider)
+05-18 14:01:47.207 24447 24464 W Unity   : 
+05-18 14:01:49.380 24447 24464 I Unity   : [OVRManager] HMDUnmounted event
+05-18 14:01:49.380 24447 24464 I Unity   : OVRManager:Update()
+05-18 14:01:49.380 24447 24464 I Unity   : 
+05-18 14:01:56.053 24447 24464 I Unity   : [OVRManager] TrackingLost event
+05-18 14:01:56.053 24447 24464 I Unity   : OVRManager:Update()
+05-18 14:01:56.053 24447 24464 I Unity   : 
+05-18 14:02:04.547 24447 24464 I Unity   : [OVRManager] OnApplicationPause(true)
+05-18 14:02:04.792 24447 24464 I Unity   : [OVRManager] OnApplicationFocus(false)
+05-18 14:03:06.450 24930 24947 I Unity   : MemoryManager: Using 'Dynamic Heap' Allocator.
+05-18 14:03:06.467 24930 24947 I Unity   : SystemInfo CPU = ARM64 FP ASIMD AES, Cores = 3, Memory = 5840mb
+05-18 14:03:06.467 24930 24947 I Unity   : SystemInfo ARM big.LITTLE configuration: 3 big (mask: 0x70), 0 little (mask: 0x0)
+05-18 14:03:06.467 24930 24947 I Unity   : XR UsableCoreMask: 0x70
+05-18 14:03:06.467 24930 24947 I Unity   : ApplicationInfo com.Group12.Yiyuan_overpriced version 0.1
+05-18 14:03:06.467 24930 24947 I Unity   : Built from '2022.2/staging' branch, Version '2022.2.9f1 (1cc571a6ec95)', Build type 'Release', Scripting Backend 'il2cpp', CPU 'arm64-v8a', Stripping 'Enabled'
+05-18 14:03:06.631 24930 24947 I Unity   : Company Name: Group12
+05-18 14:03:06.631 24930 24947 I Unity   : Product Name: Yiyuan_overpriced
+05-18 14:03:06.633 24930 24947 D Unity   : loading library OVRPlugin
+05-18 14:03:07.071 24930 24947 I Unity   : XRGeneral Settings awakening...
+05-18 14:03:07.071 24930 24947 I Unity   : UnityEngine.XR.Management.XRGeneralSettings:Awake()
+05-18 14:03:07.071 24930 24947 I Unity   : 
+05-18 14:03:08.185 24930 24947 D Unity   : initOculus Java!
+05-18 14:03:08.200 24930 24930 D Unity   : Oculus UI thread done.
+05-18 14:03:08.659 24930 25151 W Unity   : The referenced script on this Behaviour (Game Object '3rd Person Controller') is missing!
+05-18 14:03:08.659 24930 25151 W Unity   : The referenced script on this Behaviour (Game Object '3rd Person Controller') is missing!
+05-18 14:03:10.151 24930 24947 D Unity   : initOculus Java!
+05-18 14:03:10.162 24930 24930 D Unity   : Oculus UI thread done.
+05-18 14:03:12.769 24930 24947 E Unity   : DllNotFoundException: Unable to load DLL 'AudioPluginOculusSpatializer'. Tried the load the following dynamic libraries: Unable to load dynamic library 'AudioPluginOculusSpatializer' because of 'Failed to open the requested dynamic library (0x06000000) dlerror() = dlopen failed: library "AudioPluginOculusSpatializer" not found
+05-18 14:03:12.769 24930 24947 E Unity   :   at ONSPAudioSource.OSP_SetGlobalVoiceLimit (System.Int32 VoiceLimit) [0x00000] in <00000000000000000000000000000000>:0 
+05-18 14:03:12.769 24930 24947 E Unity   : 
+05-18 14:03:13.593 24930 24947 I Unity   : Unity v2022.2.9f1, Oculus Utilities v1.82.0, OVRPlugin v1.82.0, SDK v1.0.26.
+05-18 14:03:13.593 24930 24947 I Unity   : OVRManager:InitOVRManager()
+05-18 14:03:13.593 24930 24947 I Unity   : 
+05-18 14:03:13.595 24930 24947 I Unity   : SystemHeadset Oculus_Quest_2, API OpenXR
+05-18 14:03:13.595 24930 24947 I Unity   : OVRManager:InitOVRManager()
+05-18 14:03:13.595 24930 24947 I Unity   : 
+05-18 14:03:13.596 24930 24947 I Unity   : OpenXR instance 0x100000000000002 session 0x200000000000020
+05-18 14:03:13.596 24930 24947 I Unity   : OVRManager:InitOVRManager()
+05-18 14:03:13.596 24930 24947 I Unity   : 
+05-18 14:03:13.599 24930 24947 I Unity   : OVRPlugin.Media not initialized
+05-18 14:03:13.599 24930 24947 I Unity   : OVRManager:StaticInitializeMixedRealityCapture(OVRMixedRealityCaptureConfiguration)
+05-18 14:03:13.599 24930 24947 I Unity   : OVRManager:InitOVRManager()
+05-18 14:03:13.599 24930 24947 I Unity   : 
+05-18 14:03:13.604 24930 24947 I Unity   : Current display frequency 72, available frequencies [60, 60, 72, 72, 80, 80, 90, 90, 120, 120]
+05-18 14:03:13.604 24930 24947 I Unity   : OVRManager:InitOVRManager()
+05-18 14:03:13.604 24930 24947 I Unity   : 
+05-18 14:03:13.605 24930 24947 W Unity   : Local Dimming feature is not supported
+05-18 14:03:13.605 24930 24947 W Unity   : OVRManager:InitOVRManager()
+05-18 14:03:13.605 24930 24947 W Unity   : 
+05-18 14:03:13.623 24930 24947 I Unity   : Inside start door 
+05-18 14:03:13.626 24930 24947 I Unity   : OVRControllerHelp: Active controller type: Quest2 for product Oculus Quest (headset Oculus_Quest_2, hand HandRight)
+05-18 14:03:13.626 24930 24947 I Unity   : OVRControllerHelper:InitializeControllerModels()
+05-18 14:03:13.626 24930 24947 I Unity   : 
+05-18 14:03:13.629 24930 24947 I Unity   : OVRControllerHelp: Active controller type: Quest2 for product Oculus Quest (headset Oculus_Quest_2, hand HandLeft)
+05-18 14:03:13.629 24930 24947 I Unity   : OVRControllerHelper:InitializeControllerModels()
+05-18 14:03:13.629 24930 24947 I Unity   : 
+05-18 14:03:13.634 24930 24947 W Unity   : OnTriggerEnter() OVRPlayerController 
+05-18 14:03:13.634 24930 24947 W Unity   : MainPlayerController:OnTriggerEnter(Collider)
+05-18 14:03:13.634 24930 24947 W Unity   : 
+05-18 14:03:13.635 24930 24947 W Unity   : OnTriggerEnter() OVRPlayerController 
+05-18 14:03:13.635 24930 24947 W Unity   : MainPlayerController:OnTriggerEnter(Collider)
+05-18 14:03:13.635 24930 24947 W Unity   : 
+05-18 14:03:13.635 24930 24947 I Unity   : Inside Door OnTriggerEnter 
+05-18 14:03:13.635 24930 24947 I Unity   : DoorScript:OnTriggerEnter(Collider)
+05-18 14:03:13.635 24930 24947 I Unity   : 
+05-18 14:03:13.640 24930 24947 I Unity   : The current MSAA level is 0, but the recommended MSAA level is 4. Switching to the recommended level.
+05-18 14:03:13.640 24930 24947 I Unity   : OVRManager:Update()
+05-18 14:03:13.640 24930 24947 I Unity   : 
+05-18 14:03:13.640 24930 24947 I Unity   : [OVRManager] HMDAcquired event
+05-18 14:03:13.640 24930 24947 I Unity   : OVRManager:Update()
+05-18 14:03:13.640 24930 24947 I Unity   : 
+05-18 14:03:13.641 24930 24947 I Unity   : [OVRManager] HMDMounted event
+05-18 14:03:13.641 24930 24947 I Unity   : OVRManager:Update()
+05-18 14:03:13.641 24930 24947 I Unity   : 
+05-18 14:03:13.641 24930 24947 I Unity   : [OVRManager] VrFocusAcquired event
+05-18 14:03:13.641 24930 24947 I Unity   : OVRManager:Update()
+05-18 14:03:13.641 24930 24947 I Unity   : 
+05-18 14:03:13.644 24930 24947 I Unity   : [OVRManager] TrackingAcquired event
+05-18 14:03:13.644 24930 24947 I Unity   : OVRManager:Update()
+05-18 14:03:13.644 24930 24947 I Unity   : 
+05-18 14:03:13.645 24930 24947 I Unity   : Recenter event detected
+05-18 14:03:13.645 24930 24947 I Unity   : OVRDisplay:Update()
+05-18 14:03:13.645 24930 24947 I Unity   : OVRManager:Update()
+05-18 14:03:13.645 24930 24947 I Unity   : 
+05-18 14:03:13.735 24930 24947 W Unity   : Ignoring depth surface store action as it is memoryless
+05-18 14:03:13.770 24930 24947 W Unity   : OnTriggerEnter() OVRPlayerController 
+05-18 14:03:13.770 24930 24947 W Unity   : MainPlayerController:OnTriggerEnter(Collider)
+05-18 14:03:13.770 24930 24947 W Unity   : 
+05-18 14:03:13.771 24930 24947 W Unity   : OnTriggerEnter() OVRPlayerController 
+05-18 14:03:13.771 24930 24947 W Unity   : MainPlayerController:OnTriggerEnter(Collider)
+05-18 14:03:13.771 24930 24947 W Unity   : 
+05-18 14:03:14.953 24930 24947 W Unity   : OnTriggerEnter() OVRPlayerController 
+05-18 14:03:14.953 24930 24947 W Unity   : MainPlayerController:OnTriggerEnter(Collider)
+05-18 14:03:14.953 24930 24947 W Unity   : 
+05-18 14:03:15.009 24930 24947 W Unity   : OnTriggerEnter() OVRPlayerController 
+05-18 14:03:15.009 24930 24947 W Unity   : MainPlayerController:OnTriggerEnter(Collider)
+05-18 14:03:15.009 24930 24947 W Unity   : 
+05-18 14:03:15.079 24930 24947 W Unity   : OnTriggerEnter() OVRPlayerController 
+05-18 14:03:15.079 24930 24947 W Unity   : MainPlayerController:OnTriggerEnter(Collider)
+05-18 14:03:15.079 24930 24947 W Unity   : 
+05-18 14:03:15.136 24930 24947 W Unity   : OnTriggerEnter() OVRPlayerController 
+05-18 14:03:15.136 24930 24947 W Unity   : MainPlayerController:OnTriggerEnter(Collider)
+05-18 14:03:15.136 24930 24947 W Unity   : 
+05-18 14:03:16.186 24930 24947 I Unity   : Inside Door OnTriggerEnter 
+05-18 14:03:16.186 24930 24947 I Unity   : DoorScript:OnTriggerEnter(Collider)
+05-18 14:03:16.186 24930 24947 I Unity   : 
+05-18 14:03:16.618 24930 24947 W Unity   : RightHandAnchor closed
+05-18 14:03:16.618 24930 24947 W Unity   : HandController:handle_controller_behavior()
+05-18 14:03:16.618 24930 24947 W Unity   : 
+05-18 14:03:16.631 24930 24947 I Unity   : Inside OpenDoor() 
+05-18 14:03:16.631 24930 24947 I Unity   : DoorScript:OpenDoor(Single)
+05-18 14:03:16.631 24930 24947 I Unity   : DoorScript:OnTriggerStay(Collider)
+05-18 14:03:16.631 24930 24947 I Unity   : 
+05-18 14:03:16.645 24930 24947 I Unity   : Inside Door OnTriggerEnter 
+05-18 14:03:16.645 24930 24947 I Unity   : DoorScript:OnTriggerEnter(Collider)
+05-18 14:03:16.645 24930 24947 I Unity   : 
+05-18 14:03:16.645 24930 24947 W Unity   : OnTriggerEnter() OVRPlayerController 
+05-18 14:03:16.645 24930 24947 W Unity   : MainPlayerController:OnTriggerEnter(Collider)
+05-18 14:03:16.645 24930 24947 W Unity   : 
+05-18 14:03:16.840 24930 24947 W Unity   : OnTriggerEnter() OVRPlayerController 
+05-18 14:03:16.840 24930 24947 W Unity   : MainPlayerController:OnTriggerEnter(Collider)
+05-18 14:03:16.840 24930 24947 W Unity   : 
+05-18 14:03:18.776 24930 24947 I Unity   : Inside Door OnTriggerEnter 
+05-18 14:03:18.776 24930 24947 I Unity   : DoorScript:OnTriggerEnter(Collider)
+05-18 14:03:18.776 24930 24947 I Unity   : 
+05-18 14:03:18.776 24930 24947 W Unity   : OnTriggerEnter() OVRPlayerController 
+05-18 14:03:18.776 24930 24947 W Unity   : MainPlayerController:OnTriggerEnter(Collider)
+05-18 14:03:18.776 24930 24947 W Unity   : 
+05-18 14:03:19.848 24930 24947 I Unity   : Inside Door OnTriggerEnter 
+05-18 14:03:19.848 24930 24947 I Unity   : DoorScript:OnTriggerEnter(Collider)
+05-18 14:03:19.848 24930 24947 I Unity   : 
+05-18 14:03:20.030 24930 24947 W Unity   : RightHandAnchor closed
+05-18 14:03:20.030 24930 24947 W Unity   : HandController:handle_controller_behavior()
+05-18 14:03:20.030 24930 24947 W Unity   : 
+05-18 14:03:20.057 24930 24947 I Unity   : Inside Door OnTriggerEnter 
+05-18 14:03:20.057 24930 24947 I Unity   : DoorScript:OnTriggerEnter(Collider)
+05-18 14:03:20.057 24930 24947 I Unity   : 
+05-18 14:03:25.000 24930 24947 I Unity   : Inside Door OnTriggerEnter 
+05-18 14:03:25.000 24930 24947 I Unity   : DoorScript:OnTriggerEnter(Collider)
+05-18 14:03:25.000 24930 24947 I Unity   : 
+05-18 14:03:25.196 24930 24947 W Unity   : RightHandAnchor closed
+05-18 14:03:25.196 24930 24947 W Unity   : HandController:handle_controller_behavior()
+05-18 14:03:25.196 24930 24947 W Unity   : 
+05-18 14:03:25.209 24930 24947 I Unity   : Inside OpenDoor() 
+05-18 14:03:25.209 24930 24947 I Unity   : DoorScript:OpenDoor(Single)
+05-18 14:03:25.209 24930 24947 I Unity   : DoorScript:OnTriggerStay(Collider)
+05-18 14:03:25.209 24930 24947 I Unity   : 
+05-18 14:03:25.431 24930 24947 W Unity   : OnTriggerEnter() OVRPlayerController 
+05-18 14:03:25.431 24930 24947 W Unity   : MainPlayerController:OnTriggerEnter(Collider)
+05-18 14:03:25.431 24930 24947 W Unity   : 
+05-18 14:03:26.477 24930 24947 W Unity   : LeftHandAnchor closed
+05-18 14:03:26.477 24930 24947 W Unity   : HandController:handle_controller_behavior()
+05-18 14:03:26.477 24930 24947 W Unity   : 
+05-18 14:03:26.477 24930 24947 W Unity   : LeftHandAnchor grasped Tomato
+05-18 14:03:26.477 24930 24947 W Unity   : HandController:handle_controller_behavior()
+05-18 14:03:26.477 24930 24947 W Unity   : 
+05-18 14:03:26.906 24930 24947 W Unity   : OnTriggerEnter() OVRPlayerController 
+05-18 14:03:26.906 24930 24947 W Unity   : MainPlayerController:OnTriggerEnter(Collider)
+05-18 14:03:26.906 24930 24947 W Unity   : 
+05-18 14:03:26.906 24930 24947 W Unity   : OnTriggerEnter() OVRPlayerController 
+05-18 14:03:26.906 24930 24947 W Unity   : MainPlayerController:OnTriggerEnter(Collider)
+05-18 14:03:26.906 24930 24947 W Unity   : 
+05-18 14:03:27.716 24930 24947 W Unity   : LeftHandAnchor released Tomato
+05-18 14:03:27.716 24930 24947 W Unity   : HandController:handle_controller_behavior()
+05-18 14:03:27.716 24930 24947 W Unity   : 
+05-18 14:03:27.717 24930 24947 I Unity   :  get_velocity() {0} {1} (0.10, 0.03, 0.20)
+05-18 14:03:27.717 24930 24947 I Unity   : HandController:get_velocity()
+05-18 14:03:27.717 24930 24947 I Unity   : HandController:handle_controller_behavior()
+05-18 14:03:27.717 24930 24947 I Unity   : 
+05-18 14:03:27.717 24930 24947 I Unity   : hand releasing thrown supposedly 
+05-18 14:03:28.578 24930 24947 W Unity   : OnTriggerEnter() OVRPlayerController 
+05-18 14:03:28.578 24930 24947 W Unity   : MainPlayerController:OnTriggerEnter(Collider)
+05-18 14:03:28.578 24930 24947 W Unity   : 
+05-18 14:03:29.693 24930 24947 W Unity   : RightHandAnchor closed
+05-18 14:03:29.693 24930 24947 W Unity   : HandController:handle_controller_behavior()
+05-18 14:03:29.693 24930 24947 W Unity   : 
+05-18 14:03:30.639 24930 24947 W Unity   : RightHandAnchor closed
+05-18 14:03:30.639 24930 24947 W Unity   : HandController:handle_controller_behavior()
+05-18 14:03:30.639 24930 24947 W Unity   : 
+05-18 14:03:30.640 24930 24947 W Unity   : RightHandAnchor grasped chef's knief
+05-18 14:03:30.640 24930 24947 W Unity   : HandController:handle_controller_behavior()
+05-18 14:03:30.640 24930 24947 W Unity   : 
+05-18 14:03:30.997 24930 24947 W Unity   : OnTriggerEnter() OVRPlayerController 
+05-18 14:03:30.997 24930 24947 W Unity   : MainPlayerController:OnTriggerEnter(Collider)
+05-18 14:03:30.997 24930 24947 W Unity   : 
+05-18 14:03:31.196 24930 24947 I Unity   : Cutting speed {0} (0.00, 0.00, 0.00)
+05-18 14:03:31.196 24930 24947 I Unity   : Cuttable:OnTriggerEnter(Collider)
+05-18 14:03:31.196 24930 24947 I Unity   : 
+05-18 14:03:31.197 24930 24947 I Unity   : Cutting speed {0} (0.00, 0.00, 0.00)
+05-18 14:03:31.197 24930 24947 I Unity   : Cuttable:OnTriggerEnter(Collider)
+05-18 14:03:31.197 24930 24947 I Unity   : 
+05-18 14:03:31.197 24930 24947 I Unity   : Cutting speed {0} (0.00, 0.00, 0.00)
+05-18 14:03:31.197 24930 24947 I Unity   : Cuttable:OnTriggerEnter(Collider)
+05-18 14:03:31.197 24930 24947 I Unity   : 
+05-18 14:03:31.363 24930 24947 I Unity   : Cutting speed {0} (0.00, 0.00, 0.00)
+05-18 14:03:31.363 24930 24947 I Unity   : Cuttable:OnTriggerEnter(Collider)
+05-18 14:03:31.363 24930 24947 I Unity   : 
+05-18 14:03:31.864 24930 24947 I Unity   : Cutting speed {0} (0.00, 0.00, 0.00)
+05-18 14:03:31.864 24930 24947 I Unity   : Cuttable:OnTriggerEnter(Collider)
+05-18 14:03:31.864 24930 24947 I Unity   : 
+05-18 14:03:32.087 24930 24947 I Unity   : Cutting speed {0} (0.00, 0.00, 0.00)
+05-18 14:03:32.087 24930 24947 I Unity   : Cuttable:OnTriggerEnter(Collider)
+05-18 14:03:32.087 24930 24947 I Unity   : 
+05-18 14:03:32.088 24930 24947 I Unity   : Destroying Object
+05-18 14:03:32.088 24930 24947 I Unity   : Cuttable:OnTriggerEnter(Collider)
+05-18 14:03:32.088 24930 24947 I Unity   : 
+05-18 14:03:32.367 24930 24947 W Unity   : OnTriggerEnter() OVRPlayerController 
+05-18 14:03:32.367 24930 24947 W Unity   : MainPlayerController:OnTriggerEnter(Collider)
+05-18 14:03:32.367 24930 24947 W Unity   : 
+05-18 14:03:33.260 24930 24947 W Unity   : RightHandAnchor released chef's knief
+05-18 14:03:33.260 24930 24947 W Unity   : HandController:handle_controller_behavior()
+05-18 14:03:33.260 24930 24947 W Unity   : 
+05-18 14:03:33.260 24930 24947 I Unity   :  get_velocity() {0} {1} (-0.04, 0.44, -0.01)
+05-18 14:03:33.260 24930 24947 I Unity   : HandController:get_velocity()
+05-18 14:03:33.260 24930 24947 I Unity   : HandController:handle_controller_behavior()
+05-18 14:03:33.260 24930 24947 I Unity   : 
+05-18 14:03:33.261 24930 24947 I Unity   : hand releasing thrown supposedly 
+05-18 14:03:33.825 24930 24947 W Unity   : OnTriggerEnter() OVRPlayerController 
+05-18 14:03:33.825 24930 24947 W Unity   : MainPlayerController:OnTriggerEnter(Collider)
+05-18 14:03:33.825 24930 24947 W Unity   : 
+05-18 14:03:33.993 24930 24947 I Unity   : Inside Door OnTriggerEnter 
+05-18 14:03:33.993 24930 24947 I Unity   : DoorScript:OnTriggerEnter(Collider)
+05-18 14:03:33.993 24930 24947 I Unity   : 
+05-18 14:03:33.993 24930 24947 W Unity   : OnTriggerEnter() OVRPlayerController 
+05-18 14:03:33.993 24930 24947 W Unity   : MainPlayerController:OnTriggerEnter(Collider)
+05-18 14:03:33.993 24930 24947 W Unity   : 
+05-18 14:03:34.286 24930 24947 W Unity   : OnTriggerEnter() OVRPlayerController 
+05-18 14:03:34.286 24930 24947 W Unity   : MainPlayerController:OnTriggerEnter(Collider)
+05-18 14:03:34.286 24930 24947 W Unity   : 
+05-18 14:03:35.150 24930 24947 W Unity   : LeftHandAnchor closed
+05-18 14:03:35.150 24930 24947 W Unity   : HandController:handle_controller_behavior()
+05-18 14:03:35.150 24930 24947 W Unity   : 
+05-18 14:03:35.150 24930 24947 W Unity   : LeftHandAnchor grasped Tomato(Clone)
+05-18 14:03:35.150 24930 24947 W Unity   : HandController:handle_controller_behavior()
+05-18 14:03:35.150 24930 24947 W Unity   : 
+05-18 14:03:35.955 24930 24947 W Unity   : LeftHandAnchor released Tomato(Clone)
+05-18 14:03:35.955 24930 24947 W Unity   : HandController:handle_controller_behavior()
+05-18 14:03:35.955 24930 24947 W Unity   : 
+05-18 14:03:35.955 24930 24947 I Unity   :  get_velocity() {0} {1} (0.22, -0.10, 0.02)
+05-18 14:03:35.955 24930 24947 I Unity   : HandController:get_velocity()
+05-18 14:03:35.955 24930 24947 I Unity   : HandController:handle_controller_behavior()
+05-18 14:03:35.955 24930 24947 I Unity   : 
+05-18 14:03:35.955 24930 24947 I Unity   : hand releasing thrown supposedly 
+05-18 14:03:36.835 24930 24947 W Unity   : LeftHandAnchor closed
+05-18 14:03:36.835 24930 24947 W Unity   : HandController:handle_controller_behavior()
+05-18 14:03:36.835 24930 24947 W Unity   : 
+05-18 14:03:37.000 24930 24947 W Unity   : LeftHandAnchor released Tomato(Clone)
+05-18 14:03:37.000 24930 24947 W Unity   : HandController:handle_controller_behavior()
+05-18 14:03:37.000 24930 24947 W Unity   : 
+05-18 14:03:37.001 24930 24947 I Unity   :  get_velocity() {0} {1} (0.19, -0.09, -0.02)
+05-18 14:03:37.001 24930 24947 I Unity   : HandController:get_velocity()
+05-18 14:03:37.001 24930 24947 I Unity   : HandController:handle_controller_behavior()
+05-18 14:03:37.001 24930 24947 I Unity   : 
+05-18 14:03:37.001 24930 24947 I Unity   : hand releasing thrown supposedly 
+05-18 14:03:37.626 24930 24947 W Unity   : OnTriggerEnter() OVRPlayerController 
+05-18 14:03:37.626 24930 24947 W Unity   : MainPlayerController:OnTriggerEnter(Collider)
+05-18 14:03:37.626 24930 24947 W Unity   : 
+05-18 14:03:38.701 24930 24947 W Unity   : LeftHandAnchor closed
+05-18 14:03:38.701 24930 24947 W Unity   : HandController:handle_controller_behavior()
+05-18 14:03:38.701 24930 24947 W Unity   : 
+05-18 14:03:38.701 24930 24947 W Unity   : LeftHandAnchor grasped Tomato(Clone)(Clone)
+05-18 14:03:38.701 24930 24947 W Unity   : HandController:handle_controller_behavior()
+05-18 14:03:38.701 24930 24947 W Unity   : 
+05-18 14:03:39.130 24930 24947 W Unity   : OnTriggerEnter() OVRPlayerController 
+05-18 14:03:39.130 24930 24947 W Unity   : MainPlayerController:OnTriggerEnter(Collider)
+05-18 14:03:39.130 24930 24947 W Unity   : 
+05-18 14:03:39.814 24930 24947 W Unity   : LeftHandAnchor released Tomato(Clone)(Clone)
+05-18 14:03:39.814 24930 24947 W Unity   : HandController:handle_controller_behavior()
+05-18 14:03:39.814 24930 24947 W Unity   : 
+05-18 14:03:39.815 24930 24947 I Unity   :  get_velocity() {0} {1} (-0.01, -0.02, 0.07)
+05-18 14:03:39.815 24930 24947 I Unity   : HandController:get_velocity()
+05-18 14:03:39.815 24930 24947 I Unity   : HandController:handle_controller_behavior()
+05-18 14:03:39.815 24930 24947 I Unity   : 
+05-18 14:03:39.815 24930 24947 I Unity   : hand releasing thrown supposedly 
+05-18 14:03:41.024 24930 24947 W Unity   : OnTriggerEnter() OVRPlayerController 
+05-18 14:03:41.024 24930 24947 W Unity   : MainPlayerController:OnTriggerEnter(Collider)
+05-18 14:03:41.024 24930 24947 W Unity   : 
+05-18 14:03:41.080 24930 24947 W Unity   : OnTriggerEnter() OVRPlayerController 
+05-18 14:03:41.080 24930 24947 W Unity   : MainPlayerController:OnTriggerEnter(Collider)
+05-18 14:03:41.080 24930 24947 W Unity   : 
+05-18 14:03:41.121 24930 24947 W Unity   : OnTriggerEnter() OVRPlayerController 
+05-18 14:03:41.121 24930 24947 W Unity   : MainPlayerController:OnTriggerEnter(Collider)
+05-18 14:03:41.121 24930 24947 W Unity   : 
+05-18 14:03:41.596 24930 24947 W Unity   : RightHandAnchor closed
+05-18 14:03:41.596 24930 24947 W Unity   : HandController:handle_controller_behavior()
+05-18 14:03:41.596 24930 24947 W Unity   : 
+05-18 14:03:41.596 24930 24947 W Unity   : RightHandAnchor grasped chef's knief
+05-18 14:03:41.596 24930 24947 W Unity   : HandController:handle_controller_behavior()
+05-18 14:03:41.596 24930 24947 W Unity   : 
+05-18 14:03:41.999 24930 24947 W Unity   : OnTriggerEnter() OVRPlayerController 
+05-18 14:03:41.999 24930 24947 W Unity   : MainPlayerController:OnTriggerEnter(Collider)
+05-18 14:03:41.999 24930 24947 W Unity   : 
+05-18 14:03:42.180 24930 24947 W Unity   : OnTriggerEnter() OVRPlayerController 
+05-18 14:03:42.180 24930 24947 W Unity   : MainPlayerController:OnTriggerEnter(Collider)
+05-18 14:03:42.180 24930 24947 W Unity   : 
+05-18 14:03:42.208 24930 24947 I Unity   : Cutting speed {0} (0.00, 0.00, 0.00)
+05-18 14:03:42.208 24930 24947 I Unity   : Cuttable:OnTriggerEnter(Collider)
+05-18 14:03:42.208 24930 24947 I Unity   : 
+05-18 14:03:42.208 24930 24947 I Unity   : Cutting speed {0} (0.00, 0.00, 0.00)
+05-18 14:03:42.208 24930 24947 I Unity   : Cuttable:OnTriggerEnter(Collider)
+05-18 14:03:42.208 24930 24947 I Unity   : 
+05-18 14:03:42.209 24930 24947 I Unity   : Cutting speed {0} (0.00, 0.00, 0.00)
+05-18 14:03:42.209 24930 24947 I Unity   : Cuttable:OnTriggerEnter(Collider)
+05-18 14:03:42.209 24930 24947 I Unity   : 
+05-18 14:03:42.723 24930 24947 I Unity   : Cutting speed {0} (0.00, 0.00, 0.00)
+05-18 14:03:42.723 24930 24947 I Unity   : Cuttable:OnTriggerEnter(Collider)
+05-18 14:03:42.723 24930 24947 I Unity   : 
+05-18 14:03:42.974 24930 24947 W Unity   : OnTriggerEnter() OVRPlayerController 
+05-18 14:03:42.974 24930 24947 W Unity   : MainPlayerController:OnTriggerEnter(Collider)
+05-18 14:03:42.974 24930 24947 W Unity   : 
+05-18 14:03:43.322 24930 24947 I Unity   : Cutting speed {0} (0.00, 0.00, 0.00)
+05-18 14:03:43.322 24930 24947 I Unity   : Cuttable:OnTriggerEnter(Collider)
+05-18 14:03:43.322 24930 24947 I Unity   : 
+05-18 14:03:43.392 24930 24947 I Unity   : Cutting speed {0} (0.00, 0.00, 0.00)
+05-18 14:03:43.392 24930 24947 I Unity   : Cuttable:OnTriggerEnter(Collider)
+05-18 14:03:43.392 24930 24947 I Unity   : 
+05-18 14:03:43.393 24930 24947 I Unity   : Destroying Object
+05-18 14:03:43.393 24930 24947 I Unity   : Cuttable:OnTriggerEnter(Collider)
+05-18 14:03:43.393 24930 24947 I Unity   : 
+05-18 14:03:44.717 24930 24947 W Unity   : RightHandAnchor released chef's knief
+05-18 14:03:44.717 24930 24947 W Unity   : HandController:handle_controller_behavior()
+05-18 14:03:44.717 24930 24947 W Unity   : 
+05-18 14:03:44.718 24930 24947 I Unity   :  get_velocity() {0} {1} (0.63, -0.65, 0.62)
+05-18 14:03:44.718 24930 24947 I Unity   : HandController:get_velocity()
+05-18 14:03:44.718 24930 24947 I Unity   : HandController:handle_controller_behavior()
+05-18 14:03:44.718 24930 24947 I Unity   : 
+05-18 14:03:44.718 24930 24947 I Unity   : hand releasing thrown supposedly 
+05-18 14:03:45.521 24930 24947 W Unity   : OnTriggerEnter() OVRPlayerController 
+05-18 14:03:45.521 24930 24947 W Unity   : MainPlayerController:OnTriggerEnter(Collider)
+05-18 14:03:45.521 24930 24947 W Unity   : 
+05-18 14:03:46.023 24930 24947 I Unity   : [OVRManager] OnApplicationFocus(false)
+05-18 14:03:46.037 24930 24947 I Unity   : [OVRManager] InputFocusLost event
+05-18 14:03:46.037 24930 24947 I Unity   : OVRManager:Update()
+05-18 14:03:46.037 24930 24947 I Unity   : 
+05-18 14:03:46.168 24930 24947 I Unity   : [OVRManager] OnApplicationFocus(true)
+05-18 14:03:46.182 24930 24947 I Unity   : [OVRManager] InputFocusAcquired event
+05-18 14:03:46.182 24930 24947 I Unity   : OVRManager:Update()
+05-18 14:03:46.182 24930 24947 I Unity   : 
+05-18 14:03:46.209 24930 24947 W Unity   : OnTriggerEnter() OVRPlayerController 
+05-18 14:03:46.209 24930 24947 W Unity   : MainPlayerController:OnTriggerEnter(Collider)
+05-18 14:03:46.209 24930 24947 W Unity   : 
+05-18 14:03:46.210 24930 24947 W Unity   : OnTriggerEnter() OVRPlayerController 
+05-18 14:03:46.210 24930 24947 W Unity   : MainPlayerController:OnTriggerEnter(Collider)
+05-18 14:03:46.210 24930 24947 W Unity   : 
+05-18 14:03:46.241 24930 24947 I Unity   : [OVRManager] OnApplicationFocus(false)
+05-18 14:03:46.253 24930 24947 I Unity   : [OVRManager] InputFocusLost event
+05-18 14:03:46.253 24930 24947 I Unity   : OVRManager:Update()
+05-18 14:03:46.253 24930 24947 I Unity   : 
+05-18 14:03:47.535 24930 24947 I Unity   : [OVRManager] OnApplicationPause(true)

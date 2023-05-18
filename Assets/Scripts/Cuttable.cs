@@ -38,12 +38,12 @@ public class Cuttable : MonoBehaviour
             audioSource.PlayOneShot(cutAudioClip);
             Vector3 point3 = new Vector3(0, 2 * cutCount, 0);
             Instantiate(cutInto, transform.position, transform.rotation);
+            Debug.Log("Cutting speed {0} " + other.GetComponent<Rigidbody>().velocity);
             // cutting many times, destroy after 4 cuts
             if (cutCount == cutLimit){
                 audioSource.PlayOneShot(destroyAudioCilp);
                 // instantiate a trash object 
                 Instantiate(trashPrefab, transform.position, transform.rotation);
-            
                 Wait(destroyDelayTime); 
                 Debug.Log("Destroying Object");
                 gameObject.SetActive(false);
