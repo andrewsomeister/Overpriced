@@ -1,6 +1,5 @@
 # Virtual Reality Game - Overpriced
-## Authors
-Yiyuan Fang, Zhe Xiong, Andrew Shusterman
+Authors: Yiyuan Fang, Zhe Xiong, Andrew Shusterman
 
 ## Introduction
 "Overpriced" is a dynamic VR game where you join a busy food truck team. Tasked
