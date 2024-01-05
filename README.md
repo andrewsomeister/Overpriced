@@ -1,5 +1,6 @@
 # CS-444 Virtual Reality
 Group Project Game - "Overpriced"
+## Authors
 Yiyuan Fang, Zhe Xiong, Andrew Shusterman
 
 ## Introduction
