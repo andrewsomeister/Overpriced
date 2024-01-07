@@ -13,6 +13,9 @@ accuracy to avoid error sounds and earn revenue.
 ## Demo
 
 [![Watch](https://img.youtube.com/vi/UvlmjfvHIok/default.jpg)](https://youtu.be/UvlmjfvHIok) https://img.youtube.com/vi/UvlmjfvHIok/default.jpg
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=UvlmjfvHIok" target="_blank">
+ <img src="http://img.youtube.com/vi/UvlmjfvHIok/mqdefault.jpg" alt="Watch the video" width="240" height="180" border="10" />
+</a>
 
 ## Mechanics / Components
 ### Main Menu
