@@ -15,6 +15,7 @@ accuracy to avoid error sounds and earn revenue.
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=UvlmjfvHIok" target="_blank">
  <img src="http://img.youtube.com/vi/UvlmjfvHIok/maxresdefault.jpg" alt="Watch the video" width="240" height="180" border="10" />
 </a>
+Click image to watch demo!
 
 ## Mechanics / Components
 ### Main Menu
