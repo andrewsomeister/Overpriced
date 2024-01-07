@@ -10,6 +10,10 @@ clean is key, as you discard trash balls from chopping. Successfully complete an
 order by placing it in the Collection zone and pressing the button, aiming for 
 accuracy to avoid error sounds and earn revenue.
 
+## Demo
+
+[![Watch](https://img.youtube.com/vi/nTQUwghvy5Q/default.jpg)]([https://youtu.be/nTQUwghvy5Q](https://youtu.be/UvlmjfvHIok))
+
 ## Mechanics / Components
 ### Main Menu
 Players enter a Main Menu scene to choose between the tutorial and the game.
